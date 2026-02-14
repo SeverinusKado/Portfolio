@@ -97,7 +97,8 @@ export function Hero() {
                     transition={{ duration:1, delay:0.2}}
                     className="mb-6"
                     >
-                    <h1 className="text-8xl mb-4 tracking-tight">
+
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-4 tracking-tight leading-tight whitespace-normal max-w-full">
                         <span className="inline-block hover:text-cyan-400 transition-colors duration-300">
                             Severinus
                         </span>
