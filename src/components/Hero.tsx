@@ -140,24 +140,24 @@ export function Hero() {
                         Explore
                     </button>
                 </motion.div>
-            </div>
 
-            <motion.div
-                className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center text-blue-400 cursor-pointer"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                onClick={() => {
-                    document.getElementById("connect")?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                }}
-            >
-                <div className="text-blue-400 opacity-70 text-sm tracking-widest uppercase">
-                    View My Work
-                </div>
-                <div className="w-px h-16 bg-gradient-to-b from-blue-400 to-transparent mx-auto mt-2" />
-            </motion.div>
+                <motion.div
+                    className="flex flex-col items-center text-blue-400 cursor-pointer mt-12"
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    onClick={() => {
+                        document.getElementById("projects")?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }}
+                >
+                    <div className="text-blue-400 opacity-70 text-sm tracking-widest uppercase">
+                        View My Work
+                    </div>
+                    <div className="w-px h-16 bg-gradient-to-b from-blue-400 to-transparent mx-auto mt-2" />
+                </motion.div>
+            </div>
         </section>
     );
 }
