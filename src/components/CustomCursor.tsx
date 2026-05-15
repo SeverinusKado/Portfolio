@@ -1,5 +1,4 @@
-import {useEffect, useRef, useState} from "react";
-import { cn } from "./ui/utils.js";
+import { useEffect, useRef } from "react";
 
 interface Particle {
     x: number;
@@ -82,8 +81,8 @@ export function CustomCursor() {
                         particle.y,
                         particle.size * 2
                     );
-                    gradient.addColorStop(0, `rgba(0, 217, 255, ${alpha * 0.8})`);
-                    gradient.addColorStop(1, `rgba(0, 217, 255, 0)`);
+                    gradient.addColorStop(0, `rgba(59, 130, 246, ${alpha * 0.8})`);
+                    gradient.addColorStop(1, `rgba(59, 130, 246, 0)`);
 
                     ctx.beginPath();
                     ctx.arc(particle.x, particle.y, particle.size, 0, 2 * Math.PI);

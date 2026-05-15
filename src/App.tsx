@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { NeuralNetwork } from "./components/NeuralNetwork.js";
+import RippleGrid from "./components/RippleGrid.js";
 import { CustomCursor } from "./components/CustomCursor.js";
 import { Hero } from "./components/Hero.js";
 import { ContactZone } from "./components/ContactZone.js";
@@ -40,6 +40,12 @@ export default function App() {
                 "Web app that allows kids with cerebral palsy to track their therapy sessions.",
             tags: ["TypeScript", "JavaScript", "Firebase"],
         },
+        {
+            title: "Chamachain",
+            description:
+                "A Solana-powered app that automates community savings circles, so your group's money is managed by code instead of a treasurer.",
+            tags: ["React", "Node.js", "Typescript", "Rust"],
+        },
     ];
 
     const skills = [
@@ -56,8 +62,23 @@ export default function App() {
 
     return (
         <div className="min-h-screen bg-background text-foreground relative">
-            {/* Background effects */}
-            <NeuralNetwork />
+            {/* Background */}
+            <div className="fixed inset-0 z-0 pointer-events-none">
+                <RippleGrid
+                    enableRainbow={false}
+                    gridColor="#2563EB"
+                    rippleIntensity={0.05}
+                    gridSize={10}
+                    gridThickness={15}
+                    mouseInteraction
+                    mouseInteractionRadius={0.8}
+                    opacity={1}
+                    fadeDistance={1.5}
+                    vignetteStrength={2}
+                    glowIntensity={0.1}
+                    gridRotation={0}
+                />
+            </div>
             <CustomCursor />
 
             {/* Hero Section */}
@@ -66,8 +87,7 @@ export default function App() {
             </section>
 
             {/* Projects Section */}
-            <section id="projects"
-                className="relative py-20 px-4">
+            <section id="projects" className="relative z-10 py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -77,9 +97,9 @@ export default function App() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-5xl md:text-6xl mb-4">
-                            Featured <span className="text-cyan-400">Projects</span>
+                            Featured <span className="text-blue-400">Projects</span>
                         </h2>
-                        <p className="text-gray-400 text-lg md:text-xl">
+                        <p className="text-gray-200 text-lg md:text-xl">
                             A few of the ideas and systems I've brought to life.
                         </p>
                     </motion.div>
@@ -100,9 +120,8 @@ export default function App() {
                 </div>
             </section>
 
-            {/* Skills & Connect Section */}
-            <section id="connect"
-                     className="relative py-20 px-4">
+            {/* Skills Section */}
+            <section id="connect" className="relative z-10 py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -112,9 +131,9 @@ export default function App() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-5xl md:text-6xl mb-4">
-                            Skill <span className="text-cyan-400">Set</span>
+                            Skill <span className="text-blue-400">Set</span>
                         </h2>
-                        <p className="text-gray-400 text-lg md:text-xl">
+                        <p className="text-gray-200 text-lg md:text-xl">
                             Hover over the orbs to uncover my proficiency levels.
                         </p>
                     </motion.div>
@@ -131,10 +150,10 @@ export default function App() {
             <ContactZone />
 
             {/* Footer */}
-            <footer className="relative border-t border-gray-800 py-8 mt-20">
-                <div className="max-w-7xl mx-auto px-4 text-center text-gray-500">
+            <footer className="relative z-10 border-t border-gray-800 py-8 mt-20">
+                <div className="max-w-7xl mx-auto px-4 text-center text-gray-400">
                     <div className="mb-4">
-                        <span className="text-cyan-400">Severinus Kado</span> © 2026
+                        <span className="text-blue-400">Severinus Kado</span> © 2026
                     </div>
                     <div className="text-sm">
                         Built with React, Motion, and a passion for immersive experiences
